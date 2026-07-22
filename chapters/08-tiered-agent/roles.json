@@ -1,0 +1,7 @@
+{
+  "changelog-agent": {
+    "planner":  {"model": "claude-opus-4-8", "max_tokens": 1500},
+    "worker":   {"model": "ds-flash",        "max_tokens": 2000},
+    "verifier": {"model": "claude-opus-4-8", "max_tokens": 1000}
+  }
+}

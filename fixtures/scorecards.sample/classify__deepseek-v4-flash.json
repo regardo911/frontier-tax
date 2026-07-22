@@ -1,0 +1,32 @@
+{
+  "task": "classify",
+  "baseline": {
+    "model": "claude-opus-4-8",
+    "n": 40,
+    "passed": 38,
+    "errors": 0,
+    "rate": 0.95,
+    "cost": 0.812,
+    "cpt": 0.0203,
+    "ci": [
+      0.834958291820748,
+      0.9861796228538989
+    ],
+    "secs": 1.1
+  },
+  "candidate": {
+    "model": "deepseek-v4-flash",
+    "n": 40,
+    "passed": 38,
+    "errors": 0,
+    "rate": 0.95,
+    "cost": 0.06008,
+    "cpt": 0.001502,
+    "ci": [
+      0.834958291820748,
+      0.9861796228538989
+    ],
+    "secs": 0.7
+  },
+  "synthetic": true
+}

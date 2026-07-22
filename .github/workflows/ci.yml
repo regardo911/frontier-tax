@@ -1,0 +1,26 @@
+name: tests
+
+on: [push, pull_request]
+
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # nothing is installed. the analysis half of this repo is stdlib-only,
+      # and the replay half needs a provider key, which CI does not have.
+      - name: run the suite
+        shell: bash
+        run: |
+          python3 -m unittest discover tests -v 2>&1 | tee run.log
+          ran=$(grep -oE '^Ran [0-9]+ test' run.log | grep -oE '[0-9]+' || echo 0)
+          echo "tests run: $ran"
+          # a glob that matches nothing exits 0 and looks green
+          if [ "$ran" -lt 1 ]; then echo "no tests ran"; exit 1; fi
+
+      - name: every module compiles
+        run: python3 -m compileall -q chapters tests

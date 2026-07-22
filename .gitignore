@@ -1,0 +1,26 @@
+# your traces contain your prompts. ch04 makes this line an instruction.
+traces.jsonl
+traces_*.jsonl
+usage.jsonl
+usage_*.jsonl
+
+# generated from your own measurements, never committed
+scorecards/
+scorecard.json
+routes.json
+routes.json.live
+routes_recommended.json
+diet_*.json
+diet-changelog.md
+keep-list.md
+
+# secrets
+.env
+.env.*
+*.local
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/

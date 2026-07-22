@@ -1,0 +1,82 @@
+{
+  "changelog": {
+    "chosen": "deepseek-v4-flash",
+    "why": "rel_pass 0.97 of baseline at 2.3% of cost, n=40",
+    "fallback": "claude-opus-4-8",
+    "breakeven_escalation_rate": 0.977,
+    "second_choice": "claude-opus-4-8",
+    "ranked": [
+      {
+        "model": "deepseek-v4-flash",
+        "rel_pass": 0.968,
+        "cpt": 0.00041,
+        "n": 40,
+        "ci_overlap": true
+      },
+      {
+        "model": "GLM-4.6",
+        "rel_pass": 0.935,
+        "cpt": 0.0021,
+        "n": 40,
+        "ci_overlap": true
+      },
+      {
+        "model": "claude-opus-4-8",
+        "rel_pass": 1.0,
+        "cpt": 0.0178,
+        "n": 40
+      }
+    ]
+  },
+  "classify": {
+    "chosen": "deepseek-v4-flash",
+    "why": "rel_pass 1.00 of baseline at 7.4% of cost, n=40",
+    "fallback": "claude-opus-4-8",
+    "breakeven_escalation_rate": 0.926,
+    "second_choice": "claude-opus-4-8",
+    "ranked": [
+      {
+        "model": "deepseek-v4-flash",
+        "rel_pass": 1.0,
+        "cpt": 0.001502,
+        "n": 40,
+        "ci_overlap": true
+      },
+      {
+        "model": "claude-opus-4-8",
+        "rel_pass": 1.0,
+        "cpt": 0.0203,
+        "n": 40
+      }
+    ]
+  },
+  "code-review": {
+    "chosen": "claude-opus-4-8",
+    "why": "claude-sonnet-5 cleared the bar at rel_pass 0.97 but cost 107.7% of baseline, n=40",
+    "fallback": null,
+    "breakeven_escalation_rate": null,
+    "second_choice": "claude-sonnet-5",
+    "ranked": [
+      {
+        "model": "deepseek-v4-flash",
+        "rel_pass": 0.706,
+        "cpt": 0.0031,
+        "n": 40,
+        "ci_overlap": true
+      },
+      {
+        "model": "claude-opus-4-8",
+        "rel_pass": 1.0,
+        "cpt": 0.0684,
+        "n": 40
+      },
+      {
+        "model": "claude-sonnet-5",
+        "rel_pass": 0.971,
+        "cpt": 0.073667,
+        "n": 40,
+        "ci_overlap": true
+      }
+    ]
+  }
+}

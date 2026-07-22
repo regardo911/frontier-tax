@@ -1,0 +1,32 @@
+{
+  "task": "code-review",
+  "baseline": {
+    "model": "claude-opus-4-8",
+    "n": 40,
+    "passed": 34,
+    "errors": 0,
+    "rate": 0.85,
+    "cost": 2.736,
+    "cpt": 0.0684,
+    "ci": [
+      0.7092737396097997,
+      0.9293890829149256
+    ],
+    "secs": 8.1
+  },
+  "candidate": {
+    "model": "claude-sonnet-5",
+    "n": 40,
+    "passed": 33,
+    "errors": 0,
+    "rate": 0.825,
+    "cost": 2.94668,
+    "cpt": 0.073667,
+    "ci": [
+      0.6804970794560755,
+      0.9125469700311694
+    ],
+    "secs": 9.6
+  },
+  "synthetic": true
+}
